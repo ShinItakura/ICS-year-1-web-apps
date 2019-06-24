@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome to Pizza Palace</title>
+<style>
+	}
+</style>
+
+<script>
+function myFunction() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "topnav") {
+		x.className += " responsive";
+	} else {
+		x.className = "topnav";
+	}
+}
+</script>
+
+<link rel="stylesheet" href="default.css">
+</head>
+
+<body>
+<header>
+	Pizza Palace
+</header>
+
+<nav>
+<ul id="myTopnav" class="topnav">
+	<li><a href="index.html" title="Return to site main page" class="viewing">Main</a></li>
+	<li><a href="menu.html" title="View current menu">Menu</a></li>
+	<li><a href="specials.html" title="View today's specials">Specials</a></li>
+	<li><a href="opportunity.html" title="Employment opportunities">Opportunity</a></li>
+	<li><a href="about.html" title="About our restaurant">About US</a></li>
+	<li class="icon">
+	<a href="javascript:void(0);" style="font-size:15px;"onclick="myFunction()">&#9776;</a>
+	</li>
+</ul>
+</nav>
+
+<article>
+  <p> Brothers Mario and Luigi have one goal in life: to make the best pizza in the world! Enjoy any of our pizzas today.<strong></strong></p>
+<p><img src="images/pizza-oven.jpg" width="777" height="437"></p> </article>
+
+<footer>
+	Copyright &copy; 2017
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+#quizContainer {
+    width: 60%;
+    background: deepskyblue;
+    margin: 20px auto;
+    overflow: auto;
+    padding: 25px;
+}
+#resultsTop {
+    color: red;
+}
+#resultsBottom {
+    color: red;
+    background-color: yellow;
+}
+#resultsSaved {
+    color: red;
+    background-color: yellow;
+}
+header{
+    background-color: deepskyblue;
+    text-align: center;
+    font-family: Arial;
+    color: white;
+    font-size: 10pt;
+    border-bottom: #fff dashed 1px;
+}
+body{
+    background-color: coral;
+    color: white;
+    font-family: arial;
+    font-size: 10pt;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+section{
+    min-height: 400px;
+}
+form{
+    background-color:deepskyblue;
+    font-family: Arial;
+    color: white;
+    font-size: 10pt;
+}
+input[type="submit"]{ 
+    cursor:pointer;
+}
+#results h3 {
+    background-color: deepskyblue;
+    color : red;
+}

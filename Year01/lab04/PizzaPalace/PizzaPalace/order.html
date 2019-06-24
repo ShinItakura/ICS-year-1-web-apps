@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pizza Palace</title>
+
+<style type="text/css">
+.formbox { width: 620px; background-color: #ffffd5; border: 1px #333; padding: 5px; margin: 0px auto; }
+input[type=text], input[type=tel] {font-family: Helvetica, Arial, sans-serif; border:1px solid #ccc; font-size:20px; width:200px; min-height:30px; display:block; margin-bottom:15px; margin-top:5px; outline: none; border-radius:5px; }
+input[type=submit], input[type=reset] { background:none; padding:10px; }
+:invalid { border-color: #e88; box-shadow:0 0 5px rgba(255, 0, 0, .8); }
+:required { border-color: #88a; box-shadow: 0 0 5px rgba(0, 0, 255, .5); }	
+input:required:valid { background: #fff url(images/valid.png) no-repeat 98% center; box-shadow: 0 0 5px #5cd053; border-color: #28921f; }
+input:required { background: #fff url(images/red_asterisk.png) no-repeat 98% center; }
+input:focus { background: #fff; border: 1px solid #555; box-shadow: 0 0 3px #aaa; padding-right: 20px; }
+input:focus:invalid { background: #fff url(images/invalid.png) no-repeat 98% center; box-shadow: 0 0 5px #d45252; border-color: #b03535; }
+input[name=expiry] { width: 100px; }
+button.submit {
+	background-color: #68b12f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+	background: -webkit-linear-gradient(top, #68b12f, #50911e);
+	background: -moz-linear-gradient(top, #68b12f, #50911e);
+	background: -ms-linear-gradient(top, #68b12f, #50911e);
+	background: -o-linear-gradient(top, #68b12f, #50911e);
+	background: linear-gradient(top, #68b12f, #50911e);
+	border: 1px solid #509111;
+	border-bottom: 1px solid #5b992b;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #9fd574;
+	-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+	-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+	opacity:.85;
+	cursor: pointer;
+}
+button.submit:active {
+	border: 1px solid #20911e;
+	box-shadow: 0 0 10px 5px #356b0b inset;
+	-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+	-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+	-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+	-o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+button.submit:disabled {
+      opacity:0.50;
+      cursor:not-allowed;
+}
+button.reset {
+	background-color: #68b12f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+	background: -webkit-linear-gradient(top, #68b12f, #50911e);
+	background: -moz-linear-gradient(top, #68b12f, #50911e);
+	background: -ms-linear-gradient(top, #68b12f, #50911e);
+	background: -o-linear-gradient(top, #68b12f, #50911e);
+	background: linear-gradient(top, #68b12f, #50911e);
+	border: 1px solid #509111;
+	border-bottom: 1px solid #5b992b;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #9fd574;
+	-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+	-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #396715;
+}
+button.reset:hover {
+	opacity:.85;
+	cursor: pointer;
+}
+button.reset:active {
+	border: 1px solid #20911e;
+	box-shadow: 0 0 10px 5px #356b0b inset;
+	-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+	-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+	-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+	-o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+button.reset:disabled {
+      opacity:0.50;
+      cursor:not-allowed;
+}
+</style>
+
+<script>
+function myFunction() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "topnav") {
+		x.className += " responsive";
+	} else {
+		x.className = "topnav";
+	}
+}
+</script>
+
+<link rel="stylesheet" href="default.css">
+</head>
+
+<body>
+<header>
+	Pizza Palace
+</header>
+
+<nav>
+<ul id="myTopnav" class="topnav">
+	<li><a href="index.html" title="Return to site main page" >Main</a></li>
+	<li><a href="menu.html" title="View current menu">Menu</a></li>
+	<li><a href="specials.html" title="View today's specials">Specials</a></li>
+	<li><a href="opportunity.html" title="Employment opportunities">Opportunity</a></li>
+	<li><a href="about.html" title="About our restaurant">About US</a></li>
+	<li><a href="order.html" title="Order Online" class="viewing">Order</a></li>
+	<li class="icon">
+	<a href="javascript:void(0);" style="font-size:15px;"onclick="myFunction()">&#9776;</a>
+	</li>
+</ul>
+</nav>
+
+<article>
+<form name="menuorder" method="post" class="formbox" action="script/processform.php">
+	<fieldset>
+		<legend>Place your order</legend>
+		<label>First name:</label>
+		<input type="text" name="firstname" required id="firstname" placeholder="Your first name">
+		<label>Last name:</label>
+		<input type="text" name="lastname" required id="lastname" placeholder="Your last name">
+		<label>Phone:</label>
+		<input type="tel" name="phone" required id="phone" pattern="[\(]\d{3}[\)]\s*\d{3}[\-]\d{4}" title="(250) 999-9999" placeholder="(250) 999-9999">
+		<label>Credit card:</label>
+		<input type="text" name="credit" required id="credit" pattern="[0-9]{4,6}"  placeholder="99999">	
+		<label>Expiry</label>
+		<input type="text" name="expiry" required id="expiry" pattern="[0-9]{2-2}" title="Credit card expiry as MM-YY" placeholder="01-13">
+	</fieldset>
+	<fieldset>
+		<legend>Select type of pizza:</legend>
+			<input type="radio" name="pizza" value="cheese" id="cheese">
+			<label for="cheese">Cheese</label>
+			<br>
+			<input type="radio" name="pizza" value="pepperoni" id="pepperoni">
+			<label for="pepperoni">Pepperoni</label>
+			<br>
+			<input type="radio" name="pizza" value="hawaiian" id="hawaiian">
+			<label for="hawaiian">Hawaiian</label>
+	</fieldset>	<!== Pizza type fieldset -->
+	<fieldset>
+		<legend>Select size of pizza:</legend>
+		<select name="size" id="size">
+			<option value="individual" selected="selected">
+				Individual
+			</option>
+			<option value="medium">
+				Medium
+			</option>
+			<option value="large">
+				Large
+			</option>
+		
+		</select>
+	</fieldset>
+	<fieldset>
+		<legend>Select toppings:</legend>
+		<input type="checkbox" name="topping[]" value="tomato" id="tomato">
+		<label for="tomato">Tomato Sauce</label>
+		<br>
+		<input type="checkbox" name="topping[]" value="greenpepper" id="greenpepper">
+		<label for="greenpepper">Green Pepper</label>
+		<br>
+		<input type="checkbox" name="topping[]" value="mushroom" id="mushroom">
+		<label for="mushroom">Mushroom</label>
+		<br>
+		<input type="checkbox" name="topping[]" value="pepperoni" id="pepperoni">
+		<label for="pepperoni">Pepperoni</label>
+		<br>
+		<input type="checkbox" name="topping[]" value="pineapple" id="pineapple">
+		<label for="pineapple">Pineapple</label>
+	</fieldset>
+	<fieldset>
+		<legend>Select pizza quantity:</legend
+		<input type="number" id="quantity" name="quantity" value="1" min="1" max="20" required>
+	</fieldset>
+	<fieldset>
+		<legend>Select order type:</legend>
+		<input type="radio" name="order" value="pickup" id="pickup">
+		<label for="pickup">Pickup</label>
+		<br>
+		<input type="radio" name="order" value="delivery" id="delivery">
+		<label for="delivery">Delivery</label>
+	</fieldset>
+		<button class="submit" type="submit">Place order</button>
+		<button class="reset" type="reset">Reset</button>
+</form>
+</article>
+
+<footer>
+	Copyright &copy; 2017
+</footer>
+
+</body>
+</html>

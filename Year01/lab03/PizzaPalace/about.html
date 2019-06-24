@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome to Pizza Palace</title>
+<style>
+.review1 {
+	padding: 20px;
+	margin: 20px;
+	width: 120px;
+	border: 2px solid coral;
+	border-radius: 15px;
+	background-color: #ff9389;
+	postition: relative;
+}
+	
+.review2 {
+	padding:20px;
+	margin: 20px;
+	width: 130px;
+	border: 2px solid #d1b79b;
+	border-radius: 15px;
+	background-color: #f1d7bb;
+	font-family: Verdana, sans-serif;
+	box-shadow: 0 4px 4px #C2C2C2;
+	position: relative;
+	left: 100px;
+}
+.review3 {
+	padding:20px;
+	margin: 20px;
+	width: 140px;
+	border: 2px solid #d5b493;
+	border-radius: 15px;
+	background-color: #e5c4a3;
+	font-family: Verdana, sans-serif;
+	box-shadow: 0 4px 4px #C2C2C2;
+	position: relative;
+	left: 200px;
+}
+
+.customer {
+	font-style: italic;
+}
+.bold {
+	font-weight: bold;
+}
+</style>
+
+<script>
+function myFunction() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "topnav") {
+		x.className += " responsive";
+	} else {
+		x.className = "topnav";
+	}
+}
+</script>
+
+<link rel="stylesheet" href="default.css">
+</head>
+
+<body>
+<header>
+	Pizza Palace - About Us
+</header>
+
+<nav>
+<ul id="myTopnav" class="topnav">
+	<li><a href="index.html" title="Return to site main page">Main</a></li>
+	<li><a href="menu.html" title="View current menu">Menu</a></li>
+	<li><a href="specials.html" title="View today's specials">Specials</a></li>
+	<li><a href="opportunity.html" title="Employment opportunities">Opportunity</a></li>
+	<li><a href="about.html" title="About our restaurant" class="viewing">About US</a></li>
+	<li class="icon">
+	<a href="javascript:void(0);" style="font-size:15px;"onclick="myFunction()">&#9776;</a>
+	</li>
+</ul>
+</nav>
+
+<article>
+	<p>Enjoy the best pizza in the city... made just the way you like it! </p>
+	<p>&nbsp;</p>
+	<p>Hours:<span class="bold">Mon-Sat 12-8; Sun 1-7</span></p>
+	<p>&nbsp;</p>
+	<p style="float: left;">Location </p>
+  	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.5385550195992!2d-123.4022803486024!3d48.46538263614946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f73009a5c7609%3A0x5e24ae26320748f8!2s61+Interurban+Rd%2C+Victoria%2C+BC+V8Z+4W6!5e0!3m2!1sen!2sca!4v1506094903367" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<div class="review1">&quot;My friends and I always go to Pizza Palace for our monthly pizza parties. The staff are very helpful and friendly.&quot;
+	<span class="customer">P. Peach</span>
+	</div>
+	<div class="review2">&quot;...the best Hawaiian outside of Maui. They make it just the way I like it: thin crust with extra pineapple.&quot;
+	<span class="customer">K. Koopa</span>
+	</div>
+	<div class="review3">&quot;...awesome pepperoni and mushroom combo for me. I always barrel over there after work and pick up the special.&quot;
+	<span class="customer">D. Kong</span>
+	</div>
+</article>
+
+<footer>
+	Copyright &copy; 2017
+</footer>
+
+</body>
+</html>
